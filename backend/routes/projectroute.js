@@ -1,0 +1,13 @@
+const express = require("express");
+const router = express.Router();
+const { addproject } = require("../controllers/projects/addProjectcontroller");
+const { getproject } = require("../controllers/projects/getProjectcontroller");
+const { getoneproject } = require("../controllers/projects/getOneProjectcontroller");
+const { editproject } = require("../controllers/projects/editProjectcontroller");
+const { deleteproject } = require("../controllers/projects/deleteProjectcontroller");
+router.post("/addproject/:id", addproject);
+router.get("/getproject/:id", getproject);
+router.get("/getoneproject/:id", getoneproject);
+router.post("/editproject/:id", editproject);
+router.get("/deleteproject/:id", deleteproject);
+module.exports = router;
